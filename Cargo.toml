@@ -1,0 +1,17 @@
+[package]
+name = "opennd-avf"
+version = "0.7.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.2.5", features = ["derive"] }
+png = "0.17.8"
+
+
+# Comment out the lines below for a faster compile time
+[profile.release]
+strip = true
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
